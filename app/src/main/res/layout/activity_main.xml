@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_IMG_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tablecloth" />
+
+    <TextView
+        android:id="@+id/main_LBL_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="cursive"
+        android:text="Cook Eat Repeat"
+        android:textColor="#5B1717"
+        android:textSize="60sp" />
+
+    <ImageView
+        android:id="@+id/main_IMG_logo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/main_LBL_name"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/main_LAY_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_IMG_logo"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_logout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="sign out"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:backgroundTint="#DCAD61"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_login"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Log in"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:backgroundTint="#DCAD61"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_search"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Search"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:backgroundTint="#B15B58"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/main_BTN_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:background="@drawable/cook_user"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_LST_posts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_LAY_buttons"
+        android:layout_margin="7dp"
+        tools:listitem="@layout/post_view"/>
+
+</RelativeLayout>

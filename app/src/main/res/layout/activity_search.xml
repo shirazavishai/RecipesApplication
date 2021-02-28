@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Activity_Search">
+
+    <ImageView
+        android:id="@+id/search_IMG_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tablecloth" />
+
+    <LinearLayout
+        android:id="@+id/search_LAY_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="2dp"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="23dp"
+            android:src="@drawable/groceries" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_EDT_keyword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            app:boxBackgroundColor="@color/white"
+            android:hint="Search"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:placeholderText="cabbage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="16"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search_BTN_search"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add to search"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/black"
+            android:textColor="@color/black"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search_BTN_clear"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clear"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/black"
+            android:textColor="@color/black"
+            />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/search_LBL_groceries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Groceries:\n"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_LST_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            tools:listitem="@layout/post_view"/>
+
+        <TextView
+            android:id="@+id/login_LBL_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="cursive"
+            android:text="Cook Eat Repeat"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
